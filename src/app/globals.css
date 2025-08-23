@@ -5,8 +5,11 @@
   --black: #181818;
   --accent: #f9d88b;
   --silver: #bdbdbd;
+  --silver-dark: #818181;
   --white: #faf8f6;
   --elegant-white: #ededed;
+  --elegant-white-dark: #bcbcbc;
+  --gray: #222222;
 
   --font-heading: "Montserrat", sans-serif;
   --font-content: "Manjari", sans-serif;
@@ -18,14 +21,20 @@
   --color-silver: var(--silver);
   --color-white: var(--white);
   --color-ewhite: var(--elegant-white);
+  --color-ewhite-dark: var(--elegant-white-dark);
+  --color-gray: var(--gray);
+  --color-silver-dark: var(--silver-dark);
   --font-heading: var(--font-heading);
   --font-content: var(--font-content);
+}
+
+* {
+  font-family: var(--font-content);
 }
 
 body {
   background: var(--black);
   color: var(--white);
-  font-family: var(--font-content);
 }
 
 h1,h2,h3,h4,h5,h6 {

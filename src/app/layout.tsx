@@ -18,13 +18,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="pl">
       <body className="min-h-screen flex flex-col">
         {/* Navbar */}
-        <Navbar />
+        {/* <Navbar /> */}
 
         {/* Główna treść */}
         <main className="flex-1">{children}</main>
 
         {/* Footer */}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

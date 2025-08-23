@@ -9,7 +9,7 @@ type CompanyBoxProps = {
 
 const CompanyBox: React.FC<CompanyBoxProps> = ({ name, logo, className }) => {
   return (
-    <div className={`flex items-center space-x-3 ${className}`}>
+    <div className={`flex items-center space-x-4 bg-gray rounded-3xl p-3.5 md:p-4.5 ${className}`}>
       <div className="w-12 h-12 relative">
         <Image
           src={logo}
@@ -18,7 +18,7 @@ const CompanyBox: React.FC<CompanyBoxProps> = ({ name, logo, className }) => {
           className="object-contain filter grayscale"
         />
       </div>
-      <span className="font-medium text-gray-800">{name}</span>
+      <span className="font-medium text-2xl text-silver-dark tracking-wide">{name}</span>
     </div>
   );
 };

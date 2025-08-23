@@ -9,7 +9,7 @@ type OpinionCardProps = {
   stars: number;           // np. 4 lub 5
 };
 
-const DEFAULT_AVATAR = '/avatar-default.png'; // ścieżka do standardowego avatara w public/
+const DEFAULT_AVATAR = '/images/avatar.png'; // ścieżka do standardowego avatara w public/
 
 const OpinionCard: React.FC<OpinionCardProps> = ({
   name,
@@ -19,30 +19,29 @@ const OpinionCard: React.FC<OpinionCardProps> = ({
   stars,
 }) => {
   return (
-    <div className="">
+    <div className="flex flex-col bg-black px-6 py-5 rounded-3xl w-full max-w-90 gap-3">
       {/* Górna część: avatar + imię + data */}
-      <div className="">
-        <div className="">
+      <div className="flex gap-3">
+        <div className="w-10 h-10 relative rounded-full overflow-hidden">
           <Image
             src={avatar || DEFAULT_AVATAR}
             alt={`${name}.`}
             fill
-            className=""
           />
         </div>
         <div>
-          <p className="">{`${name}.`}</p>
-          <p className="">{date}</p>
+          <h3 className="text-lg font-semibold">{`${name}.`}</h3>
+          <p className="text-xs -mt-0.5 text-silver">{date}</p>
         </div>
       </div>
 
       {/* Treść opinii */}
-      <p className="">{description}</p>
+      <p className="leading-7">{description}</p>
 
       {/* Gwiazdki */}
-      <div className="">
+      <div className="flex gap-1 text-[15px]">
         {Array.from({ length: 5 }).map((_, i) => (
-          <span key={i} className={i < stars ? 'text-yellow-400' : 'text-gray-300'}>
+          <span key={i} className={i < stars ? 'text-accent' : 'text-silver'}>
             ★
           </span>
         ))}

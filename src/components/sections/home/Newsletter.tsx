@@ -11,9 +11,9 @@ export default function Newsletter() {
         
         <form>
             <Input 
-            label="Imię" 
-            type="text" 
-            placeholder="Wpisz swoje imię" 
+            label="Email" 
+            type="email" 
+            placeholder="Wpisz swój e-mail" 
             className="border border-gray-300 rounded px-3 py-2"
             />
             <button>Zapisz się</button>
