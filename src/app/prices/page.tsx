@@ -5,11 +5,11 @@ import CTA from "@/components/sections/prices/CTA";
 
 export default function Prices() {
   return (
-    <section>
-        <Hero/>
-        <Categories/>
-        <FAQ/>
-        <CTA/>
+    <section className="bg-[#000]">
+      <Hero />
+      <Categories />
+      <FAQ />
+      <CTA />
     </section>
   );
 }

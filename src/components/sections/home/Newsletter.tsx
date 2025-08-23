@@ -21,7 +21,7 @@ export default function Newsletter() {
           placeholder="Wpisz swój e-mail"
           className="border border-silver rounded px-3 py-2 w-full"
         />
-        <button className="px-5 py-3 bg-black rounded-full">Zapisz się</button>
+        <button className="px-5 py-4 bg-black rounded-full">Zapisz się</button>
       </form>
     </section>
   );

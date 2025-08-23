@@ -56,8 +56,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   const { h, s, l } = hexToHSL(color);
 
   const base = hslToCss(h, s, l);
-  const darker = hslToCss(h, s - 50, l - 55);
-  const darkest = hslToCss(h, s - 35, l - 68);
+  const darker = hslToCss(h, s - 55, l - 55);
+  const darkest = hslToCss(h, s - 68, l - 68);
 
   return (
     <div
@@ -76,8 +76,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           />
         </div>
         <div className="flex flex-col">
-          <h3 className="text-lg font-semibold">{title}</h3>
-          <p className="-mt-1 text-silver font-light" style={{ color: base }}>
+          <h3
+            className="text-lg font-semibold truncate max-w-60"
+            style={{ color: base }}
+          >
+            {title}
+          </h3>
+          <p className="text-silver font-light" style={{ color: base }}>
             {price}
           </p>
         </div>

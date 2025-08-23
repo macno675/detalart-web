@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex items-center w-full fixed top-0 left-0 justify-between h-16 bg-[#000]/20 text-white py-4 px-6 z-50 md:h-20 md:px-16 md:py-5 md:justify-start md:gap-12 backdrop-blur-2xl">
+      <nav className="flex items-center w-full fixed top-0 left-0 justify-between h-16 bg-[#000]/40 text-white py-4 px-6 z-50 md:h-20 md:px-16 md:py-5 md:justify-start md:gap-12 backdrop-blur-2xl">
         <img src="/images/logo.png" alt="Logo DetalArt" className="h-full" />
 
         {/* Burger menu */}
@@ -39,7 +39,9 @@ const Navbar = () => {
         {/* Desktop menu */}
         <div className="hidden md:flex gap-10 h-full items-center text-silver text-lg">
           <Link href="/">Strona główna</Link>
-          <Link href="/services">Usługi</Link>
+          <Link href="/services" className="hidden lg:block">
+            Usługi
+          </Link>
           <Link href="/prices">Cennik</Link>
           <Link href="/gallery">Galeria</Link>
           <Link href="/contact">Kontakt</Link>
@@ -52,7 +54,11 @@ const Navbar = () => {
           <Link href="/" onClick={() => setOpen(false)}>
             Strona główna
           </Link>
-          <Link href="/services" onClick={() => setOpen(false)}>
+          <Link
+            href="/services"
+            className="hidden lg:block"
+            onClick={() => setOpen(false)}
+          >
             Usługi
           </Link>
           <Link href="/prices" onClick={() => setOpen(false)}>

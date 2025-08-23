@@ -15,7 +15,9 @@ const Footer = () => {
         />
         <nav className="flex gap-6 flex-col items-center text-center text-xl lg:flex-row lg:gap-10">
           <Link href="/">Strona główna</Link>
-          <Link href="/services">Usługi</Link>
+          <Link href="/services" className="hidden lg:block">
+            Usługi
+          </Link>
           <Link href="/prices">Cennik</Link>
           <Link href="/gallery">Galeria</Link>
           <Link href="/contact">Kontakt</Link>
