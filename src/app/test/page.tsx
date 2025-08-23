@@ -44,7 +44,7 @@ export default function Test() {
         />
       </ServiceCategory> */}
 
-      <Switch />
+      {/* <Switch />
 
       <WhyUsCard
         icon="why_1"
@@ -55,7 +55,7 @@ export default function Test() {
         icon="why_1"
         title="Wysoka jakość"
         description="Stosujemy tylko sprawdzone środki i nowoczesny sprzęt, aby zapewnić najlepsze efekty."
-      />
+      /> */}
     </section>
   );
 }

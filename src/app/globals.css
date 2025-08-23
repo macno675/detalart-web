@@ -10,9 +10,6 @@
   --elegant-white: #ededed;
   --elegant-white-dark: #bcbcbc;
   --gray: #222222;
-
-  --font-heading: "Montserrat", sans-serif;
-  --font-content: "Manjari", sans-serif;
 }
 
 @theme inline {
@@ -24,17 +21,14 @@
   --color-ewhite-dark: var(--elegant-white-dark);
   --color-gray: var(--gray);
   --color-silver-dark: var(--silver-dark);
-  --font-heading: var(--font-heading);
-  --font-content: var(--font-content);
-}
-
-* {
-  font-family: var(--font-content);
+  --font-sans: "Manjari", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
 }
 
 body {
   background: var(--black);
   color: var(--white);
+  font-family: var(--font-sans);
 }
 
 h1,
@@ -43,5 +37,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-heading);
+  font-family: var(--font-montserrat);
+}
+
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--white); /* kolor i grubość obrysu */
+  text-stroke: 1px var(--white);
 }

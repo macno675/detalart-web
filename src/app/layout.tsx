@@ -1,16 +1,23 @@
 // src/app/layout.tsx
-import type { ReactNode } from 'react';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
-import './globals.css'; // <-- podpięcie globalnego CSS
+import { Manjari, Montserrat } from "next/font/google";
+import "./globals.css"; // <-- podpięcie globalnego CSS
+import type { ReactNode } from "react";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+
+const manjari = Manjari({ subsets: ["latin"], weight: ["100", "400", "700"] });
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 type RootLayoutProps = {
   children: ReactNode;
 };
 
 export const metadata = {
-  title: 'DetalArt',
-  description: 'Profesjonalna strona DetalArt',
+  title: "DetalArt",
+  description: "Profesjonalna strona DetalArt",
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
@@ -18,13 +25,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="pl">
       <body className="min-h-screen flex flex-col">
         {/* Navbar */}
-        {/* <Navbar /> */}
+        <Navbar />
 
         {/* Główna treść */}
         <main className="flex-1">{children}</main>
 
         {/* Footer */}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
