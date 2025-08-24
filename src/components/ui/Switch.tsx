@@ -1,29 +1,34 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 
-const categories = ["Osobowy", "SUV", "Bus"];
+type SwitchProps = {
+  options: string[];
+  value: string;
+  onChange: (value: string) => void;
+};
 
-const Switch: React.FC = () => {
-  const [active, setActive] = useState("Osobowy");
-
+const Switch: React.FC<SwitchProps> = ({ options, value, onChange }) => {
   return (
-    <div className="flex fixed top-6 md:top-8 text-accent font-light bg-accent/20 rounded-full bg-clip-padding backdrop-blur-lg border-1 border-silver-dark">
-      {categories.map((cat) => (
-        <button
-          key={cat}
-          onClick={() => setActive(cat)}
-          className={`px-5 py-3 md:px-6 rounded-full transition-all duration-200
-            ${
-              active === cat
+    <div className="flex fixed top-20 left-1/2 -translate-x-1/2 md:top-24 text-accent font-light bg-accent/20 rounded-full bg-clip-padding backdrop-blur-lg border border-silver-dark z-10">
+      {options.map((opt) => {
+        const isActive = value === opt;
+        return (
+          <button
+            key={opt}
+            type="button"
+            onClick={() => onChange(opt)}
+            aria-pressed={isActive}
+            className={`px-5 py-3 md:px-6 rounded-full cursor-pointer transition-all duration-200 ${
+              isActive
                 ? "bg-accent text-black shadow-lg"
                 : "bg-transparent text-accent hover:text-accent/50"
-            }
-          `}
-        >
-          {cat}
-        </button>
-      ))}
+            }`}
+          >
+            {opt}
+          </button>
+        );
+      })}
     </div>
   );
 };

@@ -1,11 +1,15 @@
-import Switch from "@/components/ui/Switch";
+import BeforeAfter from "@/components/ui/BeforeAfter";
 
-export default function Content() {
+type GalleryProps = {
+  images: { before: string; after: string; alt?: string }[];
+};
+
+export default function Gallery({ images }: GalleryProps) {
   return (
-    <section>
-        <Switch />
-        
-        {/* Here gallery */}
-    </section>
+    <div className="grid gap-6 px-6 py-16 md:px-16 md:py-20 sm:grid-cols-2 lg:grid-cols-3">
+      {images.map((img, i) => (
+        <BeforeAfter key={i} {...img} />
+      ))}
+    </div>
   );
 }
